@@ -37,7 +37,10 @@
         };
 
         devenv.shells.exercise-1 = {
-          packages = [ self'.packages.exercise-1-xpdf ];
+          packages = [
+            self'.packages.exercise-1-xpdf
+            pkgs.aflplusplus
+          ];
         };
 
         packages = {
