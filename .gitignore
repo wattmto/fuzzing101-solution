@@ -1,5 +1,11 @@
+# flake
 .devenv/**
 .pre-commit-config.yaml
 result
 
+# afl
 **/copus/**
+core.*
+**/out/**
+
+exercise-1/output
