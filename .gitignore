@@ -1,0 +1,5 @@
+.devenv/**
+.pre-commit-config.yaml
+result
+
+**/copus/**
