@@ -33,18 +33,26 @@
           enterShell = ''
             ${config.pre-commit.installationScript}
           '';
-
         };
 
-        devenv.shells.exercise-1 = {
-          packages = [
-            self'.packages.exercise-1-xpdf
-            pkgs.aflplusplus
-          ];
+        devenv.shells = {
+          exercise-1 = {
+            packages = [
+              self'.packages.exercise-1-xpdf
+              pkgs.aflplusplus
+            ];
+          };
+          exercise-2 = {
+            packages = [
+              self'.packages.exercise-2-exif
+              pkgs.aflplusplus
+            ];
+          };
         };
 
         packages = {
           exercise-1-xpdf = pkgs.callPackage ./exercise-1/xpdf.nix { };
+          exercise-2-exif = pkgs.callPackage ./exercise-2/exif.nix { };
         };
 
       };
